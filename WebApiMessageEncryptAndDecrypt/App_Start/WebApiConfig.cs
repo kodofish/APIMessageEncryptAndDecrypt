@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using WebApiMessageEncryptAndDecrypt.Filter;
 
 namespace WebApiMessageEncryptAndDecrypt
 {
@@ -21,6 +22,8 @@ namespace WebApiMessageEncryptAndDecrypt
                 "DefaultApi",
                 "api/{controller}/{id}",
                 new {id = RouteParameter.Optional});
+
+            config.MessageHandlers.Add(new MessageEncryptAndDencryptProcessUsingDelegatingHandler());
         }
     }
 }

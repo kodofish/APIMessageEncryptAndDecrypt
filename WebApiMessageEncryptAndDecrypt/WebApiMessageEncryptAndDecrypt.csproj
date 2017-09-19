@@ -109,10 +109,14 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ValueController.cs" />
+    <Compile Include="Filter\MessageEncryptAndDencryptProcess.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\EncryptionService.cs" />
+    <Compile Include="Service\IEncryptionService.cs" />
+    <Compile Include="Service\SecuritySetting.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
